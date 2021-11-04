@@ -1,0 +1,75 @@
+{
+  "db": "SQLite",
+  "22fc147223101983290a1917a558c6c22a7743493a9e4d39f922c9ee94340ae5": {
+    "query": "INSERT OR IGNORE INTO submission (site, id, title, posted_at, tags) VALUES ($1, $2, $3, $4, $5)",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 5
+      },
+      "nullable": []
+    }
+  },
+  "471ffd7b43bed04bc0f5d20f0c731a1474e19b01e678b29503d245a64ab413e8": {
+    "query": "UPDATE submission SET tags = $1 WHERE site = $2 AND id = $3",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 3
+      },
+      "nullable": []
+    }
+  },
+  "786835959e5779b548fa88a4921f0b7e2b3a181e64109b060e209af2de2da716": {
+    "query": "SELECT site, id, title, posted_at, tags FROM submission",
+    "describe": {
+      "columns": [
+        {
+          "name": "site",
+          "ordinal": 0,
+          "type_info": "Text"
+        },
+        {
+          "name": "id",
+          "ordinal": 1,
+          "type_info": "Int64"
+        },
+        {
+          "name": "title",
+          "ordinal": 2,
+          "type_info": "Text"
+        },
+        {
+          "name": "posted_at",
+          "ordinal": 3,
+          "type_info": "Datetime"
+        },
+        {
+          "name": "tags",
+          "ordinal": 4,
+          "type_info": "Text"
+        }
+      ],
+      "parameters": {
+        "Right": 0
+      },
+      "nullable": [
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  },
+  "dea4ddba6cb127d573b58e3b59a28021d927065c72f6506c8b4ed73e506aa090": {
+    "query": "DELETE FROM submission",
+    "describe": {
+      "columns": [],
+      "parameters": {
+        "Right": 0
+      },
+      "nullable": []
+    }
+  }
+}
